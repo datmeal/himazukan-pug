@@ -1,0 +1,220 @@
+extends ../../templates/_layout.pug
+
+block content
+    .crest_dh
+    .spec.wrapper.clearfix
+        h1 Havoc(DPS)
+        include ../../partials/spec_menu.pug
+        #intro
+            h1 クラス紹介
+            p
+                | ハヴォック(Havoc)とは、止まりがないほど続ける貯め・使い放題プレイスタイルを利用する新たなデーモンハンターのDPSスペックです。使い方としては、Furyを効率的に使うことを判断しながら、状況によってスキルをうまく使いDPSをさらに押すことです。
+            h2 どうやって動くスペックですか？
+            ul
+                li
+                    | Furyがメインのリソースです。
+                    a(href='http://www.wowhead.com/spell=162794') Chaos Strike
+                    | や
+                    a(href='http://www.wowhead.com/spell=188499') Blade Dance
+                    | のために使い、
+                    a(href='http://www.wowhead.com/spell=162243') Demon's Bite
+                    | で得ます。
+                li
+                    a(href='http://www.wowhead.com/spell=162794') Chaos Strike
+                    | から出るクリティカルヒットは、Furyのコスト半分返してくれるため、リソースの使い方が動的でアクティブになります。
+                li
+                    a(href='http://www.wowhead.com/spell=198013') Eye Beam
+                    | はCooldownが少し長いAOEで前の敵を素早く高いChaosダメージを与えるスキルです。
+                li
+                    a(href='http://www.wowhead.com/spell=195072') Fel Rush
+                    | と
+                    a(href='http://www.wowhead.com/spell=198793') Vengeful Retreat
+                    | のどちらも使用すると、瞬時に大きな距離をカバーすることを可能にするアクティブ・ハイモビリティを付与します。
+                li
+                    a(href='http://www.wowhead.com/spell=191427') Metamorphosis
+                    | はあなたのFury能力やHasteを増強する強力なバーストクールダウンです。
+        #spells
+            h1 スキル情報
+            p あとで入れよう
+        #talents
+            h1 タレント設定
+            .talent_table
+                table
+                    tr
+                        th レベル
+                        th(colspan='3') 選択
+                    tr
+                        td 99
+                        td.good
+                            .talent_icon
+                                img.good(src='/img/icons/ability_skyreach_piercing_rush.jpg', alt='')
+                            p Fel Mastery
+                        td.maybe
+                            .talent_icon
+                                img(src='/img/icons/inv_weapon_shortblade_62.jpg', alt='')
+                            p Chaos Cleave
+                        td.bad
+                            .talent_icon
+                                img(src='/img/icons/ability_bosskilrogg_deadeye.jpg', alt='')
+                            p Blind Fury
+                    tr
+                        td 100
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/ability_demonhunter_vengefulretreat.jpg', alt='')
+                                p Prepared
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/inv_weapon_shortblade_92.jpg', alt='')
+                                p Demon Blades
+                        td.bad
+                            .talent_icon
+                                img(src='/img/icons/spell_misc_zandalari_council_soulswap.jpg', alt='')
+                                p Demonic Appetite
+                h2 Tier 1 Level 99
+                table.subtalent
+                    tr
+                        td.good
+                            .talent_icon
+                                img.good(src='/img/icons/ability_skyreach_piercing_rush.jpg', alt='')
+                            p Fel Mastery
+                        td.maybe
+                            .talent_icon
+                                img(src='/img/icons/inv_weapon_shortblade_62.jpg', alt='')
+                            p Chaos Cleave
+                        td.bad
+                            .talent_icon
+                                img(src='/img/icons/ability_bosskilrogg_deadeye.jpg', alt='')
+                            p Blind Fury
+                p
+                    a(href='http://www.wowhead.com/spell=192939') Fel Mastery
+                    | :
+                    a(href='http://www.wowhead.com/spell=195072') Fel Rush
+                    | のダメージを50%増加させ、敵に当たった場合25Furyを得ます。
+                p
+                    a(href='http://www.wowhead.com/spell=206475') Chaos Cleave
+                    | :
+                    a(href='http://www.wowhead.com/spell=197125') Chaos Strike
+                    | が近くの新たなターゲットに50%ダメージで攻撃します。
+                p
+                    a(href='http://www.wowhead.com/spell=203550') Blind Fury
+                    | :
+                    a(href='http://www.wowhead.com/spell=198013') Eye Beam
+                    | Eye Beamの持続時間を50%増加します。
+                h2 Tier 2 Level 100
+                table.subtalent
+                    tr
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/ability_demonhunter_vengefulretreat.jpg', alt='')
+                                p Prepared
+                        td.good
+                            .talent_icod
+                                img(src='/img/icons/inv_weapon_shortblade_92.jpg', alt='')
+                                p Demon Blades
+                        td.bad
+                            .talent_icon
+                                img(src='/img/icons/spell_misc_zandalari_council_soulswap.jpg', alt='')
+                                p Demonic Appetite
+                p
+                    a(href='http://www.wowhead.com/spell=203551') Prepared
+                    | :
+                    a(href='http://www.wowhead.com/spell=198793') Vengeful Retreat
+                    |  のクールダウンを10秒減少させ、敵にダメージを与えた場合5秒間で40 Furyを得ます。
+                p
+                    a(href='http://www.wowhead.com/spell=203555') Demon Blades
+                    | (
+                    a(href='http://www.wowhead.com/spell=162243') Demon’s Bite
+                    | を置き換えます):自動攻撃はシャドウダメージを与え、75%の確率でFuryを得ます。
+                p
+                    a(href='http://www.wowhead.com/spell=206478') Demonic Appetite
+                    | :
+                    a(href='http://www.wowhead.com/spell=197125') Chaos Strike
+                    | はLesser Soul Fragmentを得るチャンスがあり、Soul Fragmentを取得すると30 Furyを得ます。
+        #rotation
+            h1 スキルローテーション
+            h2 一匹ローテーション
+            ul
+                li
+                    a(href='http://www.wowhead.com/spell=198793') Vengeful Retreat
+                    | （
+                    a(href='http://www.wowhead.com/spell=203551') Prepared
+                    | タレントと<85 Furyの場合）
+                li
+                    a(href='http://www.wowhead.com/spell=195072') Fel Rush
+                    | （
+                    a(href='http://www.wowhead.com/spell=192939') Fel Mastery
+                    | タレントと<70 Fury、それともチャージが2になりそうの場合）
+                li
+                    a(href='http://www.wowhead.com/spell=197125') Chaos Strike
+                    | /
+                    a(href='http://www.wowhead.com/spell=201427') Annihilation
+                    | （>70 Furyの場合）
+                li
+                    a(href='http://www.wowhead.com/spell=162243') Demon's Bite
+                    | でFuryを貯める（
+                    a(href='http://www.wowhead.com/spell=203555') Demon Blades
+                    | を利用してない場合）
+                li
+                    a(href='http://www.wowhead.com/spell=185123') Throw Glaive
+                    | （敵が遠すぎる、それとも
+                    a(href='http://www.wowhead.com/spell=203555') Demon Blades
+                    | でグローバルCDが開いてる場合）
+            h2 AOEローテーション
+            ul
+                li
+                    a(href='http://www.wowhead.com/spell=195072') Fel Rush
+                    | （
+                    a(href='http://www.wowhead.com/spell=192939') Fel Mastery
+                    | タレントと<70 Fury、敵が3匹以上、それともチャージが2になりそうの場合）
+                li
+                    a(href='http://www.wowhead.com/spell=198793') Vengeful Retreat
+                    | （
+                    a(href='http://www.wowhead.com/spell=203551') Prepared
+                    | タレントと<85 Furyの場合）
+                li
+                    a(href='http://www.wowhead.com/spell=195072') Fel Rush
+                    | （敵が3匹以上、それともチャージが2になりそうの場合）
+                li
+                    a(href='http://www.wowhead.com/spell=198013') Eye Beam
+                li
+                    a(href='http://www.wowhead.com/spell=197125') Chaos Strike
+                    | （≤3匹の敵と
+                    a(href='http://www.wowhead.com/spell=206475') Chaos Cleave
+                    | を使ってる場合）
+                li
+                    a(href='http://www.wowhead.com/spell=188499') Blade Dance
+                    | （≥3匹の敵の場合）
+                li
+                    a(href='http://www.wowhead.com/spell=197125') Chaos Strike
+                    | （>70 Furyの場合、
+                    a(href='http://www.wowhead.com/spell=203555') Demon Blades
+                    | なら60）
+                li
+                    a(href='http://www.wowhead.com/spell=162243') Demon's Bite
+                    | でFuryを貯める（
+                    a(href='http://www.wowhead.com/spell=203555') Demon Blades
+                    | を利用してない場合）
+                li
+                    a(href='http://www.wowhead.com/spell=185123') Throw Glaive
+                    | （敵が遠すぎる場合）
+        #stat
+            h1 スタット優先順位
+            ul
+                li Agility
+                li Critical Strike
+                li Versatility
+                li Haste
+                li Mastery
+            p くわしくは後で入れます。
+        #enchants
+            h1 エンチャント・バフ
+            h2 エンチャント
+            p すべてCritical Strikeが優先です。
+            p
+                | 武器は両手に
+                a(href='http://www.wowhead.com/item=110682') Mark of the Thunderlord
+                | 。
+            h2 ご飯
+            p
+                a(href='http://www.wowhead.com/item=122345') Pickled Eel

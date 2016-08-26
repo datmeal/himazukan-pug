@@ -1,0 +1,210 @@
+extends ../../templates/_layout.pug
+
+block content
+    .crest_dh
+    .spec.wrapper.clearfix
+        h1 Vengeance(タンク)
+        include ../../partials/spec_menu.pug
+        #intro
+        h1 クラス紹介
+        p
+            | Vengeanceはもっとも新しいDemon Hunterのタンクスペックです。ダブルジャンプや
+            a(href='http://www.wowhead.com/spell=189110') Infernal Strike
+            | で他のクラスよりもあちこちに早く移動できるため、「移動力の王」と名乗られてます。移動能力や
+            a(href='http://www.wowhead.com/spell=203798') Soul Cleave
+            | をよく使うのでAOEダメージも高いです。
+        h2 どうやって動くスペックですか？
+        ul
+            li
+                p あとで入れよう
+        #spells
+        h1 スキル情報
+        p あとで入れよう
+        #talents
+            h1 タレント設定
+            .talent_table
+                table
+                    tr
+                        th レベル
+                        th(colspan='3') 選択
+                    tr
+                        td 99
+                        td.maybe
+                            .talent_icon
+                                img.good(src='/img/icons/spell_warlock_summonabyssal.jpg', alt='')
+                            p Abyssal Strike
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/achievment_raid_houroftwilight.jpg', alt='')
+                            p Agonizing Flames
+                        td.bad
+                            .talent_icon
+                                img(src='/img/icons/ability_demonhunter_demonspikes2.jpg', alt='')
+                            p Razor Spikes
+                    tr
+                        td 100
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/spell_shadow_soulleech.jpg', alt='')
+                                p Feast of Souls
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/spell_volatilefiregreen.jpg', alt='')
+                                p Fallout
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/spell_fire_elementaldevastation.jpg', alt='')
+                                p Burning Alive
+                h2 Tier 1 Level 99
+                table.subtalent
+                    tr
+                        td.good
+                            .talent_icon
+                                img.good(src='/img/icons/spell_warlock_summonabyssal.jpg', alt='')
+                            p Abyssal Strike
+                        td.maybe
+                            .talent_icon
+                                img(src='/img/icons/achievment_raid_houroftwilight.jpg', alt='')
+                            p Agonizing Flames
+                        td.bad
+                            .talent_icon
+                                img(src='/img/icons/ability_demonhunter_demonspikes2.jpg', alt='')
+                            p Razor Spikes
+                p
+                    a(href='http://www.wowhead.com/spell=207550') Abyssal Strike
+                    | :
+                    a(href='http://www.wowhead.com/spell=189110') Infernal Strike
+                    | のレンジが10ヤードになりクールダウンを5秒短くします。
+                p
+                    a(href='http://www.wowhead.com/spell=207548') Agonizing Flames
+                    | :
+                    a(href='http://www.wowhead.com/spell=178740') Immolation Aura
+                    | が有効な間移動速度が30%増加し、ダメージを50%増加させます。
+                p
+                    a(href='http://www.wowhead.com/spell=209400') Razor Spikes
+                    | :
+                    a(href='http://www.wowhead.com/spell=203720') Demon Spikes
+                    | が有効な間ダメージが20%増加し、対象を6秒間snareします。
+                h2 Tier 2 Level 100
+                table.subtalent
+                    tr
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/spell_shadow_soulleech.jpg', alt='')
+                                p Feast of Souls
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/spell_volatilefiregreen.jpg', alt='')
+                                p Fallout
+                        td.good
+                            .talent_icon
+                                img(src='/img/icons/spell_fire_elementaldevastation.jpg', alt='')
+                                p Burning Alive
+                p
+                    a(href='http://www.wowhead.com/spell=207697') Feast of Souls
+                    | :
+                    a(href='http://www.wowhead.com/spell=228477') Soul Cleave
+                    |  に (Attack power * Percent health * 1.3 * 3) 分を6秒間かけて回復する効果を追加します。
+                p
+                    a(href='http://www.wowhead.com/spell=227174') Fallout
+                    | :
+                    a(href='http://www.wowhead.com/spell=178740') Immolation Aura
+                    | に敵からLesser Soul Fragmentsを得る機会があります。
+                p
+                    a(href='http://www.wowhead.com/spell=207739') Burning Alive
+                    | : 2秒ごとに
+                    a(href='http://www.wowhead.com/spell=204021') Fiery Brand
+                    |  (50% of Attack power) ファイヤダメージを近くの敵に拡散します。
+        #rotation
+            h1 スキルローテーション
+            h2 一匹ローテーション
+            p Demon Hunterの一匹ローテーションは以下の優先順位として行います。防御クールダウンなどは含めてないのでご注意ください。
+            ul
+                li
+                    a(href='http://www.wowhead.com/spell=228477') Soul Cleave
+                    |  - Painが100%に達しないように使う
+                li
+                    a(href='http://www.wowhead.com/spell=178740') Immolation Aura
+                    |  - Cooldownからあがってるときには必ず使う
+                li
+                    a(href='http://www.wowhead.com/spell=204596') Sigil of Flame
+                li
+                    a(href='http://www.wowhead.com/spell=203783') Shear
+                    |  - 以上が使えない状態でグローバルが開いてる場合
+            p
+                a(href="http://www.wowhead.com/spell=189110") Infernal Strike
+                | も1チャージのこしながら使えばさらにダメージを与えれる。移動する必要がない戦いなら2チャージ使ってもOK
+            h2 AOEローテーション
+            ul
+                li
+                    a(href='http://www.wowhead.com/spell=228477') Soul Cleave
+                    |  - Painが100%に達しないように使う
+                li
+                    a(href='http://www.wowhead.com/spell=178740') Immolation Aura
+                    |  - Cooldownからあがってるときには必ず使う
+                li
+                    a(href='http://www.wowhead.com/spell=204596') Sigil of Flame
+                    |  - Cooldownからあがってるときには必ず使う
+                li
+                    a(href='http://www.wowhead.com/spell=204021') Fiery Brand
+                    | （
+                    a(href='http://www.wowdb.com/spells/207739') Burning Alive
+                    | タレントの場合Cooldownからあがってるときには必ず使う）
+                li
+                    a(href='http://www.wowhead.com/spell=203783') Shear
+                    |  - 以上が使えない状態でグローバルが開いてる場合
+            p
+                | 一匹ローテーションと同じく
+                a(href="http://www.wowhead.com/spell=189110") Infernal Strike
+                | を1チャージのこしながら使えばさらにダメージを与えれる。移動する必要がない戦いなら2チャージ使ってもOK
+            h2 防御スキル
+            ul
+                li
+                    a(href='http://www.wowhead.com/spell=228477') Soul Cleave
+                    |  - 回復が必要な時
+                li
+                    a(href='http://www.wowhead.com/spell=203720') Demon Spikes
+                    |  - できればかならず攻撃されてるときには使う
+                li
+                    a(href='http://www.wowhead.com/spell=218256') Empower Wards
+                    |  - Magicダメージを受けそうな時に使う
+                li
+                    a(href='http://www.wowhead.com/spell=204021') Fiery Brand
+                    |  - 敵から高いダメージを受けそうと思ってる時に使う、あるいはくらってるダメージを減らしたい場合
+            h2 防御Cooldown
+            a(href="http://www.wowhead.com/spell=187827") Metamorphosis
+            |  - 15秒間現在と最大HPを30%増やし、その間に1秒毎に7 Painを追加します。
+        #stat
+            h1 スタット優先順位
+            h2 「生き延びたい」
+            ul
+                li Agility
+                li Versatility
+                li Haste &ge; Mastery
+                li Critical Strike
+            h2 「ダメージしたい」
+            ul
+                li Agility
+                li Mastery
+                li Critical Strike
+                li Versatility
+                li Haste
+            h2 ダンジョン用
+            ul
+                li Agility
+                li Mastery
+                li Critical Strike
+                li Versatility
+                li Haste
+            p くわしくは後で入れます。
+        #enchants
+            h1 エンチャント・バフ
+            h2 エンチャント
+            p すべてMasteryが優先です。
+            p
+                | 武器は両手に
+                a(href='http://www.wowhead.com/item=118015') Mark of Bleeding Hollow
+                | 。
+            h2 ご飯
+            p
+                a(href='http://www.wowhead.com/item=122343') Sleeper Sushi

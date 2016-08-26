@@ -1,0 +1,87 @@
+doctype
+
+html
+    include ./head.pug
+
+    body
+
+        div
+            p First Paragraph
+
+            p
+                | Lorep ipsum
+                br
+                | Lorem ipsum
+
+            p.
+                paoiwsjfaoij apoifjpasoifj apa osifdjpasdj
+        #2nd_div.second_class
+
+        //- Won't see me
+        // Can see me
+
+        -myName = "Derek"
+
+        p Hello #{myName}
+        p 1234 + 5678 = #{1234 * 5678}
+
+        - website = "http://newthinktank.com"
+
+        a(href="#{website}")
+
+        - heroes = ["Wonder Woman","Super Girl","Bat Girl"]
+
+        ul
+            li: a(href="#") #{heroes[0]}
+            li: a(href="#") #{heroes[1]}
+            li: a(href="#") #{heroes[2]}
+
+        - batmanData = "Batman is a weiner."
+
+        p= batmanData
+
+        - fnI = {"type": "text", "name": "fName"}
+
+        span First Name
+        input(type=fnI.type, name=fnI.name)
+
+        - someInfo = "<i>Very Interesting</i>"
+        p!= someInfo
+        p !{someInfo}
+
+        - date = new Date()
+        - hour = date.getHours()
+
+        - if ((hour >= 6) && hour <= 17)) {
+            h3 Day Time
+        - } else {
+            h3 Night Time
+        - }
+
+        - age = 18
+
+        if((age >= 16) && (age < 18))
+            h3 You can drive
+        else if age >= 18
+            h3 You Can Drive and Vote
+        else
+            h3 You can wiat til you're 16
+
+        unless age >= 16
+            h3 You'll drive at 16
+        else
+            h3 You can drive
+
+        - dayTime = (((hour >=6) && (hour >= 17)) ? 'Day Time' : 'Night Time')
+
+        h3 #{dayTime}
+
+        - name = "Sue"
+
+        case name
+            when "Sally"
+                h3 Hi Sally
+            when "Sue"
+                h3 Hi Sue
+            default
+                h3 Hi You
