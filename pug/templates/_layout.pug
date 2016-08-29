@@ -8,8 +8,8 @@ head
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     link(rel='stylesheet', href='/css/normalize.min.css')
-    link(rel='stylesheet', href='/css/main.css')
     link(rel='stylesheet', href='/css/slideout.css')
+    link(rel='stylesheet', href='/css/main.css')
     script(src='/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')
     script(type='text/javascript', src='http://wow.zamimg.com/widgets/power.js')
     script.
@@ -23,7 +23,7 @@ body
             a(href='http://browsehappy.com/') upgrade your browser
             |  to improve your experience.
     nav#menu
-        include ../partials/_navigation.pug
+        include ../partials/_pc_navigation.pug
     main#panel
         .header-container
             header.clearfix
@@ -31,7 +31,10 @@ body
                 a(href='/')
                     h1 ひま図鑑
         .main-container
+            block mainvisual
+            include ../partials/_pc_navigation.pug
             block content
+            include ../partials/_pc_links.pug
             // #main
             // #main-container
             .footer-container

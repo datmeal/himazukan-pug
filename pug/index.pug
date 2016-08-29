@@ -3,10 +3,32 @@ extends ./templates/_layout.pug
 block title
     title ひま図鑑
 
-block content
+block mainvisual
     div.mainvisual
         h1 ひま図鑑へようこそ！
+
+block content
     div.main.wrapper.clearfix
-        h1 ひま図鑑とは？
-        p 世界で#1と認められている最高MMORPG「World of Warcraft」は、英語のゲームだから日本語の情報が少ない状態です。ひま図鑑の目標は、米国や欧国のプレイヤーがアクセスできる情報を日本に統一することです。
-        p まだまだ全然情報が少ない状態ですが、これからがんばりますのでお楽しみにしてください！
+        article
+            img(src="/img/illidan.png")
+            h1 ついにLegion!
+            p いよいよ拡張開始です！ですが、何をすればいいかわからないために基本的な情報を集め（パクリ）ました！
+            ul Legion 基本情報
+                li Max Levelは110. Level 98からBroken Islesでクエスト開始できます
+                li 新しいクラスがDemon Hunter
+                li Legionが開始した後、Broken Shore, Dalaranにいくクエストをもらい、ArtifactをDalaran Questから手に入れます
+                li Legionのzoneレベルは自分のレベルにスケールされるので、敵やクエストアイテムのilvlはレベルにより変わります。始めるzoneは４つから選択できます。
+                li Legionでは武器ドロップはありません。手に入れたアーティファクトを使い続けます。TraitやRelicでさらにゲームプレイをアップさせます。
+                li 拡張開始の時にはダンジョンが10あります。Profession, クラスキャンペーン、そしてworld questによりダンジョンを攻略します。Mythic+と言うChallenge Modeの代わりである超難しいダンジョンモードもあります。
+                li 開始時で一番高いilvlのlootを落とすのはworld bossです。他のlootはwarforgedなどでilvl850になる可能性があります
+                li Max levelになる頃にはworld questができるようになります。Questによりいろいろな種類のreward（報酬）をもらい、Daily Questで各Factionによりもっといいrewardを手にいれます（D3のバウンティーシステムみたいです）
+                li Class Hallはクラスにより象徴的な場所であり、有名なNPCと出会ったりArtifactを強化できるところです
+                li 各Professionにクエストラインがあり、世界を回りながらrecipeを学びます。
+                li PVPシーズンは９月20日に開始するがHonor Talentsは拡張スタートの８月３０日上げることが可能です
+                li Mythic+ ダンジョン、N/H Emerald Nightmareレイド、PVPシーズン1は9/20開始予定。
+
+        article
+            h1 ひま図鑑とは？
+            p 世界で一番遊ばれているMMORPG「World of Warcraft」は、日本語がサポートされておらず日本語の情報がなかなかありません。
+            p ひま図鑑は、主に英語のサイト情報を日本語に翻訳・意訳しているサイトです。
+            p まだまだ情報が少ないですが、これからがんばりますので楽しみにしてください！

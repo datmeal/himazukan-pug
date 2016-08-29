@@ -13,8 +13,7 @@ a {
   text-decoration: none;
   color: #ecf0f1; }
 
-::-moz-selection,
-::selection {
+::-moz-selection, ::selection {
   background: #b3d4fc;
   text-shadow: none; }
 
@@ -26,12 +25,7 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
   vertical-align: middle; }
 
 fieldset {
@@ -52,7 +46,7 @@ textarea {
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 body {
-  font: 15px/24px "Noto Sans Japanese", Helvetica, Helvetica Neue, Arial; }
+  font: 13px/20px "Noto Sans Japanese", Helvetica, Helvetica Neue, Arial; }
 
 .wrapper {
   width: 90%;
@@ -66,21 +60,15 @@ nav ul {
   padding: 0;
   list-style-type: none; }
 
-nav p {
-  display: block;
-  text-align: left;
-  padding-left: 8px;
-  font-weight: bold; }
-
 nav a {
   display: block;
   padding: 15px 0;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  color: #56bafd; }
+  color: white; }
   nav a:hover, nav a:visited {
-    opacity: 0.6; }
+    color: white; }
   nav a:hover {
     text-decoration: underline; }
 
@@ -89,24 +77,15 @@ nav a {
    ============== */
 .main {
   padding: 4% 0; }
-  .main article {
-    text-align: left;
-    padding-bottom: 40px; }
-    .main article h1 {
-      font-size: 22px; }
-    .main article img {
-      max-width: 100%; }
-    .main article ul {
-      width: 90%;
-      margin: 0 auto;
-      text-align: center; }
-      .main article ul li {
-        text-align: left; }
+  .main article h1 {
+    font-size: 2em; }
+  .main aside {
+    color: white;
+    padding: 0px 5% 10px; }
 
 .footer-container footer {
   color: #ecf0f1;
-  text-align: center;
-  margin: 0 auto; }
+  text-align: center; }
 
 /* ===============
     ALL: IE Fixes
@@ -141,8 +120,7 @@ body {
   #back-to-top.show {
     opacity: 1; }
   #back-to-top a {
-    display: block;
-    color: #56bafd; }
+    display: block; }
   #back-to-top img {
     max-width: 44px;
     max-height: 44px; }
@@ -152,10 +130,10 @@ body {
   height: 44px;
   position: relative;
   background: #2c3e50;
-  border-bottom: 1px solid #56bafd; }
+  border-bottom: 1px solid #3498db; }
   .header-container .logo {
     display: block;
-    background: url("/img/mobile_logo.png") no-repeat top left;
+    background: url("../img/mobile_logo.png") no-repeat top left;
     background-size: auto 44px;
     height: 44px;
     width: 56px;
@@ -180,10 +158,7 @@ body {
     clear: both; }
 
 .main-container {
-  min-height: 568px;
-  text-align: center; }
-  .main-container #pc_menu {
-    display: none; }
+  min-height: 568px; }
 
 button.accordion {
   background-color: #2980b9;
@@ -196,11 +171,12 @@ button.accordion {
   outline: none;
   transition: 0.4s; }
   button.accordion.active, button.accordion:hover {
-    background-color: #56bafd; }
+    background-color: #3498db; }
 
 .menu_class {
   background-color: #2c3e50;
-  text-align: left; }
+  text-align: left;
+  display: none; }
   .menu_class.show {
     display: block; }
   .menu_class a {
@@ -245,14 +221,10 @@ button.accordion {
     background: url("../img/icons/wlk.png") no-repeat 8px;
     background-size: 32px; }
 
-.menu_dungeon a {
-  text-align: left;
-  padding-left: 8px; }
-
 .mainvisual {
   position: relative;
   width: 100%;
-  background: url("/img/suramar.jpg") no-repeat;
+  background: url("../img/suramar.jpg") no-repeat;
   background-size: contain;
   height: 0;
   padding-top: 56.25%;
@@ -264,7 +236,7 @@ button.accordion {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: url("/img/mascot.png") no-repeat;
+    background: url("../img/mascot.png") no-repeat;
     background-size: contain;
     width: 25%;
     height: 0;
@@ -284,7 +256,8 @@ button.accordion {
   line-height: 24px;
   text-align: center;
   margin: 0;
-  padding: 0 0 4%; }
+  padding: 0;
+  padding-bottom: 4%; }
 
 .class h1 {
   text-align: center; }
@@ -321,7 +294,7 @@ button.accordion {
 
 .spec .toc_spec {
   margin: 20px 0;
-  color: #56bafd;
+  color: #3498db;
   display: block;
   list-style-type: none;
   border: 1px solid #000; }
@@ -341,56 +314,36 @@ button.accordion {
       display: block;
       color: #ecf0f1; }
 
-.spec #enchants,
-.spec #intro,
-.spec #rotation,
-.spec #spells,
-.spec #stat,
-.spec #talents {
+.spec #intro, .spec #spells, .spec #talents, .spec #rotation, .spec #stat, .spec #enchants {
   margin-bottom: 40px; }
-  .spec #enchants ul,
-  .spec #intro ul,
-  .spec #rotation ul,
-  .spec #spells ul,
-  .spec #stat ul,
-  .spec #talents ul {
+  .spec #intro ul, .spec #spells ul, .spec #talents ul, .spec #rotation ul, .spec #stat ul, .spec #enchants ul {
     margin-left: 4%; }
 
-.spec #talents .talent_table .subtalent,
-.spec #talents .talent_table table {
+.spec #talents .talent_table table, .spec #talents .talent_table .subtalent {
   width: 100%;
   border: 1px solid #000; }
-  .spec #talents .talent_table .subtalent tr,
-  .spec #talents .talent_table table tr {
+  .spec #talents .talent_table table tr, .spec #talents .talent_table .subtalent tr {
     background: #2c3e50; }
-    .spec #talents .talent_table .subtalent tr:first-child,
-    .spec #talents .talent_table table tr:first-child {
+    .spec #talents .talent_table table tr:first-child, .spec #talents .talent_table .subtalent tr:first-child {
       background: #2980b9; }
-  .spec #talents .talent_table .subtalent td,
-  .spec #talents .talent_table table td {
+  .spec #talents .talent_table table td, .spec #talents .talent_table .subtalent td {
     text-align: center;
     width: 30%;
     vertical-align: top;
     padding: 4% 0;
     position: relative; }
-    .spec #talents .talent_table .subtalent td:first-child,
-    .spec #talents .talent_table table td:first-child {
+    .spec #talents .talent_table table td:first-child, .spec #talents .talent_table .subtalent td:first-child {
       width: 10%;
       vertical-align: middle; }
-    .spec #talents .talent_table .subtalent td.good,
-    .spec #talents .talent_table table td.good {
+    .spec #talents .talent_table table td.good, .spec #talents .talent_table .subtalent td.good {
       background: rgba(0, 255, 0, 0.2); }
-    .spec #talents .talent_table .subtalent td.maybe,
-    .spec #talents .talent_table table td.maybe {
+    .spec #talents .talent_table table td.maybe, .spec #talents .talent_table .subtalent td.maybe {
       background: rgba(125, 125, 0, 0.2); }
-    .spec #talents .talent_table .subtalent td.bad,
-    .spec #talents .talent_table table td.bad {
+    .spec #talents .talent_table table td.bad, .spec #talents .talent_table .subtalent td.bad {
       background: rgba(255, 0, 0, 0.2); }
-    .spec #talents .talent_table .subtalent td .talent_icon,
-    .spec #talents .talent_table table td .talent_icon {
+    .spec #talents .talent_table table td .talent_icon, .spec #talents .talent_table .subtalent td .talent_icon {
       display: block; }
-      .spec #talents .talent_table .subtalent td .talent_icon img,
-      .spec #talents .talent_table table td .talent_icon img {
+      .spec #talents .talent_table table td .talent_icon img, .spec #talents .talent_table .subtalent td .talent_icon img {
         display: block;
         margin: 0 auto;
         width: 56px;
@@ -407,8 +360,7 @@ button.accordion {
   .spec #talents .talent_table .subtalent td:first-child {
     width: 33%; }
 
-.spec #rotation ul,
-.spec #stat ul {
+.spec #rotation ul, .spec #stat ul {
   list-style-type: decimal; }
 
 .crest_dh {
@@ -416,7 +368,7 @@ button.accordion {
   width: 100%;
   margin: 0 auto;
   max-width: 260px;
-  background: url("/img/crests/dh.png") no-repeat;
+  background: url("../img/crests/dh.png") no-repeat;
   background-size: contain;
   height: 0;
   padding-top: 285px;
@@ -443,66 +395,30 @@ button.accordion {
   /* ============
       WIDE: Menu
      ============ */
-  .wrapper {
-    width: 1024px;
-    margin: 0 0 0 20px; }
   .logo {
     float: left; }
   .header-container button {
     display: inline-block;
     width: 20%;
     text-align: center; }
-  .header-container .logo {
-    display: none; }
-  .main {
-    display: inline-block;
-    margin-bottom: 40px;
-    border: 1px solid #2980b9;
-    padding: 20px;
-    width: 60%; }
-  .main-container #pc_menu, #links {
-    width: 20%;
-    border: 1px solid #2980b9;
-    vertical-align: top;
-    display: inline-block; }
-    .main-container #pc_menu p, #links p {
-      height: auto; }
-  .menu_class {
-    display: block; }
-  .mainvisual {
-    padding-top: 250px;
-    background-size: 100% auto;
-    background-position: bottom;
-    margin-bottom: 20px; }
-    .mainvisual:after {
-      background-size: 50%;
-      background-position: bottom; }
   /* ============
       WIDE: Main
-     ============ */ }
-
-@media only screen and (min-width: 1024px) {
-  /* ===============
-      Maximal Width
-     =============== */
-  .main-container #pc_menu {
-    width: 158px; }
-  .main {
-    width: 530px; }
-  #links {
-    text-align: left;
-    width: 300px;
-    margin-left: 20px; }
-    #links li a {
-      text-align: left;
-      padding-left: 8px; } }
+     ============ */
+  .main article {
+    float: left;
+    width: 57%; }
+  .main aside {
+    float: right;
+    width: 28%; } }
 
 @media only screen and (min-width: 1280px) {
   /* ===============
       Maximal Width
      =============== */
   .wrapper {
-    /* 1140px - 10% for margins */ } }
+    width: 1152px;
+    /* 1140px - 10% for margins */
+    margin: 0 auto; } }
 
 /* ==========================================================================
    Helper classes
@@ -550,7 +466,7 @@ button.accordion {
     color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important; }
-    *:after, *:before {
+    *:before, *:after {
       background: transparent !important;
       color: #000 !important;
       box-shadow: none !important;
@@ -565,8 +481,7 @@ button.accordion {
     content: " (" attr(title) ")"; }
   a[href^="#"]:after, a[href^="javascript:"]:after {
     content: ""; }
-  blockquote,
-  pre {
+  pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
   thead {
@@ -576,11 +491,8 @@ button.accordion {
   img {
     page-break-inside: avoid;
     max-width: 100% !important; }
-  h2,
-  h3,
-  p {
+  p, h2, h3 {
     orphans: 3;
     widows: 3; }
-  h2,
-  h3 {
+  h2, h3 {
     page-break-after: avoid; } }
